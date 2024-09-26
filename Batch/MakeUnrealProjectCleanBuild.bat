@@ -46,7 +46,7 @@ REM ## Recompile the C++ code
 
 REM ## Make example Android build, for Windows change -targetPlatform, remove -cookflavor
 REM ## Good reference for list of commands: https://github.com/botman99/ue4-unreal-automation-tool
-"%PathToEngine%\Engine\Build\BatchFiles\RunUAT.bat" BuildCookRun -nocompile -nocompileeditor -installed -nop4 -project="%PATHTOPROJECT%\ProjectName.uproject" -cook -stage -archive -archivedirectory="%PATHTOARCHIVE%" -package -clean -compressed -SkipCookingEditorContent -pak -prereqs -nodebuginfo -targetplatform=Android -cookflavor=ASTC -build -clientconfig=Development -utf8output
+"%PathToEngine%\Engine\Build\BatchFiles\RunUAT.bat" BuildCookRun -nocompile -nocompileeditor -installed -nop4 -project="%PATHTOPROJECT%\ProjectName.uproject" -cook -stage -archive -archivedirectory="%PATHTOARCHIVE%" -package -clean -compressed -SkipCookingEditorContent -pak -prereqs -nodebuginfo -targetplatform=Android -cookflavor=ASTC -build -clientconfig=Development -utf8output || goto ExitError
 goto Cleanup
 
 :CheckPath
@@ -57,6 +57,7 @@ if not exist "%~1" (
     pause
     goto ExitError
 )
+goto :EOF
 
 :Cleanup
 REM ## Optional addition back of the read-only if removed 
