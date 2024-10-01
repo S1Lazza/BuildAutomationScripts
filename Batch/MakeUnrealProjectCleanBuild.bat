@@ -44,9 +44,10 @@ REM ## Generate Visual Studio project files
 REM ## Recompile the C++ code
 "%MSBUILD_EXE%" "%PATHTOPROJECT%\ProjectName.sln" /t:build /p:Configuration="Development Editor";Platform=Win64;verbosity=diagnostic
 
+echo Project build started.
 REM ## Make example Android build, for Windows change -targetPlatform, remove -cookflavor
 REM ## Good reference for list of commands: https://github.com/botman99/ue4-unreal-automation-tool
-"%PathToEngine%\Engine\Build\BatchFiles\RunUAT.bat" BuildCookRun -nocompile -nocompileeditor -installed -nop4 -project="%PATHTOPROJECT%\ProjectName.uproject" -cook -stage -archive -archivedirectory="%PATHTOARCHIVE%" -package -clean -compressed -SkipCookingEditorContent -pak -prereqs -nodebuginfo -targetplatform=Android -cookflavor=ASTC -build -clientconfig=Development -utf8output || goto ExitError
+"%PathToEngine%\Engine\Build\BatchFiles\RunUAT.bat" BuildCookRun -nocompile -nocompileeditor -unattended -noeditor -installed -nop4 -project="%PATHTOPROJECT%\ProjectName.uproject" -cook -stage -archive -archivedirectory="%PATHTOARCHIVE%" -package -clean -compressed -SkipCookingEditorContent -pak -prereqs -nodebuginfo -targetplatform=Android -cookflavor=ASTC -build -clientconfig=Development -utf8output || goto ExitError
 goto Cleanup
 
 :CheckPath

@@ -21,8 +21,9 @@ REM ## The Setup.bat requires a manual input to overwrite these files, so you ne
 
 "%PATHTOENGINE%\GenerateProjectFiles.bat" || goto ExitError
 
+echo Start building the engine
 REM ## The -clean command force a full rebuild
-"%PATHTOENGINE%\Engine\Build\BatchFiles\RunUAT.bat" BuildGraph -target="Make Installed Build Win64" -script=Engine/Build/InstalledEngineBuild.xml -clean -set:WithMac=false -set:WithAndroid=false -set:WithIOS=false -set:WithTVOS=false -set:WithLinux=false -set:WithLinuxArm64=false -set:WithWin64=true -WithDCC=false || goto ExitError
+"%PATHTOENGINE%\Engine\Build\BatchFiles\RunUAT.bat" BuildGraph -target="Make Installed Build Win64" -script=Engine/Build/InstalledEngineBuild.xml -clean -unattended -noeditor -set:WithMac=false -set:WithAndroid=false -set:WithIOS=false -set:WithTVOS=false -set:WithLinux=false -set:WithLinuxArm64=false -set:WithWin64=true -WithDCC=false || goto ExitError
 
 REM Delete all the .pdb files to massively reduce the size of the engine (optional)
 del /S /Q "%PATHTOBUILTENGINE%\*.pdb"
@@ -38,9 +39,11 @@ if not exist "%~1" (
 goto :EOF
 
 :ExitError
+echo Build of the engine completed.
 exit /B 1
 
 :ExitSuccess
+echo Error: build of the engine failed.
 exit /B 0
 
 endlocal
