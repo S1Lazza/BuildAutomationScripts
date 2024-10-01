@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<SettableOptions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SerialisableColours>
+    <SerialisableColour LocalColour="-1" />
+    <SerialisableColour LocalColour="-1" />
+    <SerialisableColour LocalColour="-1" />
+    <SerialisableColour LocalColour="-1" />
+    <SerialisableColour LocalColour="-5658199" />
+    <SerialisableColour LocalColour="-5658199" />
+    <SerialisableColour LocalColour="-5658199" />
+    <SerialisableColour LocalColour="-2894893" />
+    <SerialisableColour LocalColour="-1" />
+    <SerialisableColour LocalColour="-7667712" />
+    <SerialisableColour LocalColour="-7667712" />
+    <SerialisableColour LocalColour="-2987746" />
+    <SerialisableColour LocalColour="-2987746" />
+    <SerialisableColour LocalColour="-16777077" />
+    <SerialisableColour LocalColour="-16777077" />
+    <SerialisableColour LocalColour="-16777077" />
+    <SerialisableColour LocalColour="-16777077" />
+    <SerialisableColour LocalColour="-16777077" />
+    <SerialisableColour LocalColour="-16777077" />
+    <SerialisableColour LocalColour="-7278960" />
+    <SerialisableColour LocalColour="-16744448" />
+    <SerialisableColour LocalColour="-16711681" />
+    <SerialisableColour LocalColour="-8388480" />
+    <SerialisableColour LocalColour="-16744448" />
+    <SerialisableColour LocalColour="-16777216" />
+    <SerialisableColour LocalColour="-16777216" />
+    <SerialisableColour LocalColour="-16777216" />
+  </SerialisableColours>
+  <AllowedRemoteAgentNames>*</AllowedRemoteAgentNames>
+  <CoordinatorRemotingHost>SHARED-SERVER</CoordinatorRemotingHost>
+  <MaximumJobsToKeep>5</MaximumJobsToKeep>
+  <BringToFront>false</BringToFront>
+  <ShowDeveloperMenu>true</ShowDeveloperMenu>
+  <OptionsVersion>15</OptionsVersion>
+  <WindowLocation>
+    <X>571</X>
+    <Y>543</Y>
+  </WindowLocation>
+  <WindowSize>
+    <Width>1182</Width>
+    <Height>768</Height>
+  </WindowSize>
+  <AgentTabIndex>2</AgentTabIndex>
+  <VisualiserZoomLevel>4</VisualiserZoomLevel>
+</SettableOptions>
