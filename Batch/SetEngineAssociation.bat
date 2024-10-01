@@ -4,6 +4,7 @@ REM ## Thanks to: https://x157.github.io/UE5/Windows-Registry-Keys#CustomEngineA
 @echo off
 setlocal
 
+REM ## The same keyname must be set in the .uproject file for the EngineAssociation section
 set KEYNAME=EngineCustomName
 
 echo Creating or updating registry key for custom Unreal Engine version.
